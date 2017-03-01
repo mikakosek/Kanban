@@ -4,12 +4,16 @@
     border-radius: $deg;
 }
 
-$color-board: #0395A9;
-$color-column: #027C8D;
-$color-card: #0395A9;
-$color-button: #015A66;
-$color-placeholder: #00DDFC;
-$color-hover: #00DDFC;
+
+$color-hover: #D5E0E4;
+
+$color-primary-0: #27586B;	
+$color-primary-1: #D5E0E4;
+$color-primary-2: #638A99;
+$color-primary-3: #052D3D;
+$color-primary-4: #000B0F;
+
+
 
 
 * {
@@ -19,14 +23,14 @@ $color-hover: #00DDFC;
 
 
 .button-add {
-    background-color: $color-button;
-    border-color: $color-button;
+    background-color: $color-primary-3;
+    border-color: $color-primary-3;
     &.active.focus, &.active:focus, &.focus, &:active.focus, &:active:focus, &:focus, &:active {
-        outline-color: $color-button;
+        outline-color: $color-primary-3;
         color: #fff;
     }
     &:hover {
-        outline-color: $color-button;
+        outline-color: $color-primary-3;
         color: $color-hover;
     }
 }
@@ -34,11 +38,11 @@ $color-hover: #00DDFC;
     background-color: transparent;
     border-color: transparent;
     &.active.focus, &.active:focus, &.focus, &:active.focus, &:active:focus, &:focus, &:active {
-        outline-color: $color-button;
+        outline-color: $color-primary-3;
         color: #fff;
     }
     &:hover {
-        outline-color: $color-button;
+        outline-color: $color-primary-3;
         color: $color-hover;
     }
 }
@@ -54,7 +58,7 @@ $color-hover: #00DDFC;
     min-height: 300px;
     margin: 10px auto;
     @include border-radius(10px);
-    background-color: $color-board;
+    background-color: $color-primary-2;
     padding: 20px;
     h1 {
         font-size: 30px;
@@ -70,8 +74,8 @@ $color-hover: #00DDFC;
 }
 
 .column {
-    border: 4px solid $color-board;
-    background-color: $color-column;
+    border: 4px solid $color-primary-2;
+    background-color: $color-primary-0;
     @include border-radius(10px);
     padding: 10px;
     .column-title {
@@ -86,17 +90,22 @@ $color-hover: #00DDFC;
         min-height: 20px;
         li {
             height: 100px;
-            background-color: $color-card;
+            background-color: $color-primary-1;
             @include border-radius(10px);
             padding: 10px 40px 10px 10px;
             width: 90%;
             margin: 10px auto;
+            color: $color-primary-4;
+            .button-delete:hover {
+                color: $color-primary-0;
+            }
             .card-description {
+                color: $color-primary-4;
             }
         }
         .card-placeholder {
             background-color: transparent;
-            border: 2px dashed $color-placeholder;
+            border: 2px dashed $color-primary-1;
         }
     }
     .btn-delete {
